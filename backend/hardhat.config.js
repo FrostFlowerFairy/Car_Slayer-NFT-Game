@@ -19,7 +19,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-const { MORALIS_RINKEBY_URL, MORALIS_FUJI_URL, PRIVATE_KEY } = process.env;
+const { MORALIS_RINKEBY_URL, MORALIS_FUJI_URL, PRIVATE_KEY, API_KEY } = process.env;
 
 module.exports = {
   solidity: "0.8.1",
@@ -34,6 +34,6 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: "H155Y1UNBTYEH2ESCC6RWUHVJG99Y36358",
+    apiKey: API_KEY,
   },
 };
